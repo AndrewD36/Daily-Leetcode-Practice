@@ -1,5 +1,5 @@
 class Solution:
-    def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
+    def findDisappearedNumbers(self, nums: list[int]) -> list[int]:
         missingNums = []
 
         numsSet = set(nums)
