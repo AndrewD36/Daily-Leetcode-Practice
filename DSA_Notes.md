@@ -16,9 +16,28 @@ def closeDuplicatesBruteForce(nums, k):
 
 With array [1,2,3,2,3,3] and k = 3
 
-The approach becomes an O(n^2) solution because the outer loop will loop n times and the inner loop repeats k times where k <= n.
+The approach becomes a O(n^2) or O(n * k) solution because the outer loop will loop n times and the inner loop repeats k times where k <= n.
+
+Using a hashset can optimize this sliding window algorithm in this exact example. The hashset will detect duplicates already meaning we don't have to manually compare the two pointers values in each window.
+
+```python
+def closeDuplicates(nums, k):
+    window = set() # Cur window of size <= k
+    L = 0
+
+    for R in range(len(nums)):
+        if R - L + 1 > k:
+            window.remove(nums[L])
+            L += 1
+        if nums[R] in window:
+            return True
+        window.add(nums[R])
+
+    return False
+```
 
 ## Sliding Window (Variable Size)
 
 ## Two Pointers
 
+The main idea is to have a left pointer **L** and right pointer **R** that start at some indices of an array. They move throughout the array to compare values at specific indices.
