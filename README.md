@@ -1,11 +1,12 @@
 # Solving Method:
 
-## C - Clarify
+## CLEAR
 
-## L - List Examples
+C - Clarify
+L - List Examples
+E - Explore Approaches
+A - Apply The Solution
+R - Review
 
-## E - Explore Approaches
+## Notes:
 
-## A - Apply The Solution
-
-## R - Review
